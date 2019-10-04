@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\daniel.raistrick\\source\\repos\\edabit\\edabit\\edabit.csproj": {}
+    "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\edabit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\daniel.raistrick\\source\\repos\\edabit\\edabit\\edabit.csproj": {
+    "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\edabit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daniel.raistrick\\source\\repos\\edabit\\edabit\\edabit.csproj",
+        "projectUniqueName": "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\edabit.csproj",
         "projectName": "edabit",
-        "projectPath": "C:\\Users\\daniel.raistrick\\source\\repos\\edabit\\edabit\\edabit.csproj",
+        "projectPath": "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\edabit.csproj",
         "packagesPath": "C:\\Users\\daniel.raistrick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daniel.raistrick\\source\\repos\\edabit\\edabit\\obj\\",
+        "outputPath": "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
