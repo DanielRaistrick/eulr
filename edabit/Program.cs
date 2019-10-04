@@ -21,6 +21,9 @@ namespace edabit {
             }
         }
 
+
+
+
         public static bool isEmpty(string str) {
             return (str.Contains(" "));
         }
