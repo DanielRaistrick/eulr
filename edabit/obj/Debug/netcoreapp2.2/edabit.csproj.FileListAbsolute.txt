@@ -20,3 +20,13 @@ C:\Users\daniel.raistrick\source\repos\11\edabit\obj\Debug\netcoreapp2.2\edabit.
 C:\Users\daniel.raistrick\source\repos\11\edabit\obj\Debug\netcoreapp2.2\edabit.AssemblyInfo.cs
 C:\Users\daniel.raistrick\source\repos\11\edabit\obj\Debug\netcoreapp2.2\edabit.dll
 C:\Users\daniel.raistrick\source\repos\11\edabit\obj\Debug\netcoreapp2.2\edabit.pdb
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp2.2\edabit.deps.json
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp2.2\edabit.runtimeconfig.json
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp2.2\edabit.runtimeconfig.dev.json
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp2.2\edabit.dll
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp2.2\edabit.pdb
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp2.2\edabit.csprojAssemblyReference.cache
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp2.2\edabit.AssemblyInfoInputs.cache
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp2.2\edabit.AssemblyInfo.cs
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp2.2\edabit.dll
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp2.2\edabit.pdb

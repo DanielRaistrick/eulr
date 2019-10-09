@@ -15,13 +15,23 @@ namespace edabit {
             Console.WriteLine(SumOfMultiplesOfThreeFiveBelowValue(1000));
             //Console.WriteLine(SumOfEvenFibonacciNumbersBelowValue(4000000));
             //Console.WriteLine(PrimeFactorCalculator(600851475143));
-            List<long> listLong = Generate(600851475143);
-            foreach(long v in listLong) {
-                Console.WriteLine(v);
-            }
+            //List<long> listLong = Generate(600851475143);
+            //foreach(long v in listLong) {
+            //    Console.WriteLine(v);
+            //}
+            Console.WriteLine(DoubleLetters("soomeWord"));
         }
 
+        public static bool DoubleLetters(string word) {
+            int wordLen = word.Length - 1;
 
+            for (int i = 0; i < wordLen; i++) {                                
+                if (word[i] == word[i + 1]) {
+                    return true;
+                }  
+            }            
+            return false;
+        }
 
 
         public static bool isEmpty(string str) {
