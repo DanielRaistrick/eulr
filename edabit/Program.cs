@@ -19,7 +19,67 @@ namespace edabit {
             //foreach(long v in listLong) {
             //    Console.WriteLine(v);
             //}
-            Console.WriteLine(DoubleLetters("soomeWord"));
+            //Console.WriteLine(DoubleLetters("soomeWord"));
+            string whatever = OddishOrEvenish(4352);
+            Console.WriteLine(whatever );
+            Console.WriteLine(gcd(32,8));
+            Console.WriteLine(FindDigitAmount(0));
+        }
+
+        public static int FindDigitAmount(int num) {
+            //should have done it as per this comment
+            //return num.ToString().Length;
+
+            if (num == 0) {
+                return 1;
+            }
+            int sum = 0;
+            int counter = 0;
+            while (num != 0) {
+                sum += num % 10;
+                num /= 10;
+                counter++;
+            }
+            return counter;
+
+        }
+
+        public static int gcd(int n1, int n2) {
+            
+            int max = n2;
+            int result = 0;
+            if (n1 > n2) { 
+                max = n1; 
+            }
+
+            for(int i = 1; i < max; i++) {
+                if (n1 % i == 0 && n2 % i == 0) {
+                    result = i;
+                }
+            }
+
+            return result;
+
+        }
+
+        public static string OddishOrEvenish(int num) {
+            int sum = 0;
+            while (num != 0) {
+                sum += num % 10;
+                num /= 10;
+            }
+            return (sum % 2 != 0 ? "Oddish" : "evenish"); 
+        }
+
+        public static string RemoveFirstLast(string str) {
+            if (str.Length <= 2) {
+                return str;
+            }
+
+            str = str.Remove(str.Length - 1);
+            str = str.Remove(0, 1);
+
+            return str;
         }
 
         public static bool DoubleLetters(string word) {
