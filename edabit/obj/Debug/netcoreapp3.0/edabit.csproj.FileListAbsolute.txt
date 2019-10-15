@@ -1,0 +1,11 @@
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp3.0\edabit.exe
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp3.0\edabit.deps.json
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp3.0\edabit.runtimeconfig.json
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp3.0\edabit.runtimeconfig.dev.json
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp3.0\edabit.dll
+C:\Users\danra\source\repos\eulr\edabit\bin\Debug\netcoreapp3.0\edabit.pdb
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp3.0\edabit.csprojAssemblyReference.cache
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp3.0\edabit.AssemblyInfoInputs.cache
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp3.0\edabit.AssemblyInfo.cs
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp3.0\edabit.dll
+C:\Users\danra\source\repos\eulr\edabit\obj\Debug\netcoreapp3.0\edabit.pdb
