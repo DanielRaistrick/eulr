@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace edabit {
     class Program {
@@ -12,7 +13,7 @@ namespace edabit {
             Console.WriteLine(test1);
             Console.WriteLine(FindLargestNum(new int[] { 1, 2, 3, 4, 5, 7 }));
             Console.WriteLine(differenceMaxMin(new int[] { 1, 2, 3, 4, 5, 7 }));
-            Console.WriteLine(SumOfMultiplesOfThreeFiveBelowValue(1000));
+            Console.WriteLine(SumOfMultiplesOfThreeFiveBelowValue(1356));
             //Console.WriteLine(SumOfEvenFibonacciNumbersBelowValue(4000000));
             //Console.WriteLine(PrimeFactorCalculator(600851475143));
             //List<long> listLong = Generate(600851475143);
@@ -24,6 +25,108 @@ namespace edabit {
             Console.WriteLine(whatever );
             Console.WriteLine(gcd(32,8));
             Console.WriteLine(FindDigitAmount(0));
+            Console.WriteLine(Century(2135));
+            Console.WriteLine(FindSmallestNum(new double[] { 1.05, 2, 3, 4, 5, 7 }));
+            string noYellTest = NoYelling("What went wrong?????????");
+            Console.WriteLine(noYellTest);
+            int[] piratesTravels = new int[] { -1, -4 };
+            Console.WriteLine(NumberOfDays(piratesTravels));
+            //Console.ReadKey();
+            Console.WriteLine(IsPrime(4));
+        }
+
+        public static string RemoveSpecialCharacters(string str) {
+            return Regex.Replace(str, @"[^\w\d- ]", "");
+        }
+
+        public static string FormatNum(int num) {
+            string numString = num.ToString("#,##0");
+            return numString;
+        }
+
+        public static bool IsPrime(int value) {
+            if (value <= 1) {
+                return false;
+            }
+
+            for (int i = 2; i <= Math.Sqrt(value); i+=2) {
+                if(value % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static int NumberOfDays(int[] coordinates) {
+            int returnNum = 0;
+
+            foreach (var item in coordinates) {
+                returnNum += Math.Abs(item);
+            }
+            
+            int extraRestNotRequired = returnNum % 5 == 0 ?  -1 : 0;
+            int restDays = returnNum / 5;
+            returnNum = returnNum  + restDays + extraRestNotRequired;
+            
+            return returnNum;
+
+            //int travelDays = Math.Abs(coordinates[0] + coordinates[1]);
+            //int restDays = (travelDays - 1) / 5;
+            //return travelDays + restDays;
+        }
+
+
+        public static string NoYelling(string phrase) {
+            if (phrase.EndsWith("??")) {
+                char[] MyChar = { '?' };
+                phrase = phrase.TrimEnd(MyChar);
+                string questionMark = "?";
+                phrase += questionMark;
+            }
+            return phrase;
+        }
+
+        public static double FindSmallestNum(double[] arr) {
+            return arr.Min();
+        }
+
+        public static string Century(int year) {
+            int zeroYearSum = 0;
+            int counter = 0;
+
+            year = year / 100;
+
+            while (year != 0) {
+                zeroYearSum += year % 10;
+                year /= 10;
+                counter++;
+                if (counter >= 2) {
+                    break;
+                }
+            }
+
+            if(zeroYearSum != 0) {
+                year++;
+            }
+            string suffix = getYearSuffix(year);
+            return $"{year}{suffix} century";
+        }
+
+        static string getYearSuffix(int day) {
+            switch (day) {
+                case 1:
+                case 21:
+                case 31:
+                    return "st";
+                case 2:
+                case 22:
+                    return "nd";
+                case 3:
+                case 23:
+                    return "rd";
+                default:
+                    return "th";
+            }
         }
 
         public static int FindDigitAmount(int num) {
