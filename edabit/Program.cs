@@ -33,10 +33,71 @@ namespace edabit {
             Console.WriteLine(NumberOfDays(piratesTravels));
             //Console.ReadKey();
             Console.WriteLine(IsPrime(4));
+            Console.WriteLine(RemoveSmallest(new int[] { 1, 2, 3, 4, 5 } ));
+            Console.WriteLine(AlternatingCaps("whatever you want it to be"));
         }
 
-        public static string RemoveSpecialCharacters(string str) {
-            return Regex.Replace(str, @"[^\w\d- ]", "");
+        public static string AlternatingCaps(string str) {
+            //str.ToLower();
+            string intermediaryString = str;
+            string returnString = "";
+            
+            for (int i = 0; i <= str.Length -1; i++) {
+                string spaceString = " ";
+                if ((str[i] == spaceString.ToCharArray()[0])) {
+                    returnString += " ";
+                    continue;
+                }
+
+
+                if (i == 0) {
+                    returnString += Char.ToUpper(str[i]);
+                    continue;
+                }
+                if(Char.IsWhiteSpace(returnString[i-1])){
+                    returnString = (Char.IsUpper(returnString[i - 2])) ? returnString += Char.ToLower(intermediaryString[i]) : returnString += Char.ToUpper(intermediaryString[i]);
+                }
+                else {
+                    returnString = (Char.IsUpper(returnString[i - 1])) ? returnString += Char.ToLower(intermediaryString[i]) : returnString += Char.ToUpper(intermediaryString[i]);
+                }
+                
+
+            }              
+            
+            return returnString;
+
+            //better way below
+            //bool isUpper = true;
+            //string returnStr = "";
+            //foreach (char c in str) {
+            //    if (isUpper && c != ' ') {
+            //        returnStr += char.ToUpper(c);
+            //        isUpper = false;
+            //    }
+            //    else if (!isUpper && c != ' ') {
+            //        returnStr += char.ToLower(c);
+            //        isUpper = true;
+            //    }
+            //    else {
+            //        returnStr += " ";
+            //    }
+            //}
+            //return returnStr;
+        }
+
+        public static int[] RemoveSmallest(int[] values) {
+            if(values.Length == 0) {
+                return values;
+            }
+            int min = values.Min();
+
+            values = values.Where(x => x != min ).ToArray();
+            
+            return values;
+        }
+
+        public static bool RemoveSpecialCharacters(string str) {            
+            return Regex.IsMatch(str, @"^\(\d{3}\) \d{3}\-\d{4}$");
         }
 
         public static string FormatNum(int num) {
