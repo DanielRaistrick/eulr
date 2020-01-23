@@ -6,6 +6,10 @@ namespace edabit {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Hello World!");
+            Console.WriteLine(CountOnes(99));
+            Console.WriteLine(ValidatePIN("po34"));
+            double[] multiples = Multiples(7, 5);
+            multiples.ToList().ForEach(i => Console.WriteLine(i.ToString()));
             bool test = isEmpty("");
             Console.WriteLine(test);
             bool test1 = isEmpty(" ");
@@ -24,8 +28,71 @@ namespace edabit {
             Console.WriteLine(whatever );
             Console.WriteLine(gcd(32,8));
             Console.WriteLine(FindDigitAmount(0));
+            int pallindromeresult = PallindromeTest();
+            Console.WriteLine("pall result " + pallindromeresult);
         }
 
+        public static int CountOnes(int i) {
+
+            return Convert.ToString(i, 2).Count(c => c == '1');
+
+
+
+            //string binary = Convert.ToString(i, 2);
+            //int counter = 0;
+            //foreach (var item in binary) {
+            //    if(item == '1') {
+            //        counter++;
+            //    }
+            //}
+            //return counter;
+        }
+
+        public static bool ValidatePIN(string pin) {  
+            return (pin.Length == 4 || pin.Length == 6) && pin.All(char.IsDigit);
+        }
+
+        private static double[] Multiples(int num, int length) {
+            double[] returnArray;
+            List<double> multiplesList = new List<double>();
+
+            for (int i = 1; i <= length; i++) {
+                multiplesList.Add(num * i);
+            }
+            returnArray = multiplesList.ToArray();
+            return returnArray;
+        }
+
+        public static int PallindromeTest () {
+
+            List<int> list = new List<int>();
+
+            for (int i = 100; i < 1000; i++) {
+
+                for (int j = 100; j < 1000; j++) {
+                    int productResult = i * j;
+                    Console.WriteLine(productResult);
+                    
+                    int  r, sum = 0, temp;                    
+                    if(productResult == 10201) {
+                        int nonsense = 2;
+                    }
+                    temp = productResult;
+                    while (productResult > 0) {
+                        r = productResult % 10;
+                        sum = (sum * 10) + r;
+                        productResult = productResult / 10;
+                    }
+                    if (temp == sum) {
+                        Console.WriteLine(temp);
+                        list.Add(temp);
+                    }
+                        
+                                      
+                }
+            }
+            return list.Max();
+        }
         public static int FindDigitAmount(int num) {
             //should have done it as per this comment
             //return num.ToString().Length;
