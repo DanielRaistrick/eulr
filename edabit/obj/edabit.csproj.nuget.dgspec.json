@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\edabit.csproj": {}
+    "C:\\Users\\danra\\source\\repos\\eulr\\edabit\\edabit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\edabit.csproj": {
+    "C:\\Users\\danra\\source\\repos\\eulr\\edabit\\edabit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\edabit.csproj",
+        "projectUniqueName": "C:\\Users\\danra\\source\\repos\\eulr\\edabit\\edabit.csproj",
         "projectName": "edabit",
-        "projectPath": "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\edabit.csproj",
-        "packagesPath": "C:\\Users\\daniel.raistrick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daniel.raistrick\\source\\repos\\11\\edabit\\obj\\",
+        "projectPath": "C:\\Users\\danra\\source\\repos\\eulr\\edabit\\edabit.csproj",
+        "packagesPath": "C:\\Users\\danra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danra\\source\\repos\\eulr\\edabit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\daniel.raistrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,10 +49,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

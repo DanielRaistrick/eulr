@@ -9,6 +9,9 @@ namespace edabit {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Hello World!");
+            double[] haystack_1 = new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15 };
+            CountPosSumNeg(haystack_1);
+            Console.WriteLine(MissingAngle(30, 30));
             Console.WriteLine(CountOnes(99));
             Console.WriteLine(ValidatePIN("po34"));
             double[] multiples = Multiples(7, 5);
@@ -51,7 +54,77 @@ namespace edabit {
             //double sumOfFirstMillPrimes = SumOfPrimesBelowMillion();
             //Console.WriteLine(sumOfFirstMillPrimes);
             //TriangleNumbers();
-            Console.WriteLine(BigIntegerSum());
+            //Console.WriteLine(BigIntegerSum());
+        }
+
+        public static int[] CountPosSumNeg(double[] arr) {
+            //int[] emptyList = { };
+            //if (arr.Count() == 0) {
+            //    return emptyList;
+            //}
+
+            //int positiveCounter = 0;
+            //int negativeCounter = 0;
+            //foreach (var item in arr) {
+            //    if(item > 0) {
+            //        positiveCounter++;
+            //    } else {
+            //        negativeCounter += (int)item;
+            //    }
+            //}
+            //int[] intList = new int[2];
+            //intList[0] = positiveCounter;
+            //intList[1] = negativeCounter;
+            //return intList;
+
+            if (!arr.Any()) return new int[0];
+            var pos = arr.Where(n => n > 0);
+            var neg = arr.Where(n => n < 0);
+            return new int[2] { pos.Count(), (int) neg.Sum() };
+
+        }
+
+        public static string MissingAngle(int angle1, int angle2) {
+
+            int result = angle1 + angle2;
+            if (result == 90)
+                return "right";
+
+
+            string returnResult = (result < 90) ? "obtuse" : "acute";
+
+            return returnResult;
+        }
+
+        public static int CountOnes(int i) {
+
+            return Convert.ToString(i, 2).Count(c => c == '1');
+
+
+
+            //string binary = Convert.ToString(i, 2);
+            //int counter = 0;
+            //foreach (var item in binary) {
+            //    if(item == '1') {
+            //        counter++;
+            //    }
+            //}
+            //return counter;
+        }
+
+        public static bool ValidatePIN(string pin) {
+            return (pin.Length == 4 || pin.Length == 6) && pin.All(char.IsDigit);
+        }
+
+        private static double[] Multiples(int num, int length) {
+            double[] returnArray;
+            List<double> multiplesList = new List<double>();
+
+            for (int i = 1; i <= length; i++) {
+                multiplesList.Add(num * i);
+            }
+            returnArray = multiplesList.ToArray();
+            return returnArray;
         }
 
         public static BigInteger BigIntegerSum() {
@@ -435,36 +508,7 @@ namespace edabit {
             Console.WriteLine("pall result " + pallindromeresult);
         }
 
-        public static int CountOnes(int i) {
-
-            return Convert.ToString(i, 2).Count(c => c == '1');
-
-
-
-            //string binary = Convert.ToString(i, 2);
-            //int counter = 0;
-            //foreach (var item in binary) {
-            //    if(item == '1') {
-            //        counter++;
-            //    }
-            //}
-            //return counter;
-        }
-
-        public static bool ValidatePIN(string pin) {  
-            return (pin.Length == 4 || pin.Length == 6) && pin.All(char.IsDigit);
-        }
-
-        private static double[] Multiples(int num, int length) {
-            double[] returnArray;
-            List<double> multiplesList = new List<double>();
-
-            for (int i = 1; i <= length; i++) {
-                multiplesList.Add(num * i);
-            }
-            returnArray = multiplesList.ToArray();
-            return returnArray;
-        }
+        
 
         public static int PallindromeTest () {
 
